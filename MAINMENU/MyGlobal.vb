@@ -88,7 +88,7 @@ Public Class MyGlobal
                     "persist security info=false")
           
         Try
-            'MsgBox("buka access")
+            MsgBox("buka access")
             tmprptcn.Open()
             'MsgBox("open buka access")
         Catch sx As OleDb.OleDbException
