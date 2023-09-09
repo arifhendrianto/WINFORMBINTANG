@@ -132,31 +132,6 @@ Public Class MyGlobal
 
      
 
-    Sub baca_svrcfg()
-        Dim MyString = ""
-        Dim ctr As Short
-
-        FileOpen(1, pdir & "\SVRCFG.TXT", OpenMode.Input) ' Open file for input.
-
-        ctr = 1
-        Do While Not EOF(1)
-            Input(1, MyString)
-            Select Case ctr
-                Case Is = 1
-                    suid = "sa"
-                Case Is = 2
-                    sserver = "IT-07"
-                Case Is = 3
-                    sdbs = "DBBINTANG"
-                Case Is = 4
-                    spwd = "sqlhrd2015"
-            End Select
-            ctr = ctr + 1
-        Loop
-        FileClose(1)
-    End Sub
-
-
     'Sub baca_svrcfg()
     '    Dim MyString = ""
     '    Dim ctr As Short
@@ -168,18 +143,43 @@ Public Class MyGlobal
     '        Input(1, MyString)
     '        Select Case ctr
     '            Case Is = 1
-    '                suid = dec_svrcfg(Trim(MyString))
+    '                suid = "sa"
     '            Case Is = 2
-    '                sserver = dec_svrcfg(Trim(MyString))
+    '                sserver = "IT-07"
     '            Case Is = 3
-    '                sdbs = dec_svrcfg(Trim(MyString))
+    '                sdbs = "DBBINTANG"
     '            Case Is = 4
-    '                spwd = dec_svrcfg(Trim(MyString))
+    '                spwd = "sqlhrd2015"
     '        End Select
     '        ctr = ctr + 1
     '    Loop
     '    FileClose(1)
     'End Sub
+
+
+    Sub baca_svrcfg()
+        Dim MyString = ""
+        Dim ctr As Short
+
+        FileOpen(1, pdir & "\SVRCFG.TXT", OpenMode.Input) ' Open file for input.
+
+        ctr = 1
+        Do While Not EOF(1)
+            Input(1, MyString)
+            Select Case ctr
+                Case Is = 1
+                    suid = dec_svrcfg(Trim(MyString))
+                Case Is = 2
+                    sserver = dec_svrcfg(Trim(MyString))
+                Case Is = 3
+                    sdbs = dec_svrcfg(Trim(MyString))
+                Case Is = 4
+                    spwd = dec_svrcfg(Trim(MyString))
+            End Select
+            ctr = ctr + 1
+        Loop
+        FileClose(1)
+    End Sub
 
 
     Sub simpan_svrcfg()
