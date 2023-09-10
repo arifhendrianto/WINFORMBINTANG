@@ -83,6 +83,18 @@ Partial Class PURCHASE_ORDER
         Me.XTabMenu = New DevExpress.XtraTab.XtraTabPage()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.dgDetail = New System.Windows.Forms.DataGridView()
+        Me.NO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ITEMID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ITEM = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QTYORDER = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UNIT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UNITPRICE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DISC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TOTALPRICE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PRNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QTYPR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOTES = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ROWID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnPph = New System.Windows.Forms.Button()
@@ -134,18 +146,6 @@ Partial Class PURCHASE_ORDER
         Me.txtDPAmount = New System.Windows.Forms.TextBox()
         Me.txtDPPct = New System.Windows.Forms.TextBox()
         Me.cbDP = New System.Windows.Forms.ComboBox()
-        Me.NO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ITEMID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ITEM = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QTYORDER = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UNIT = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UNITPRICE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DISC = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TOTALPRICE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PRNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QTYPR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NOTES = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ROWID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StatusStrip1.SuspendLayout()
         Me.tbstmst.SuspendLayout()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -201,7 +201,7 @@ Partial Class PURCHASE_ORDER
         'tsInputDate
         '
         Me.tsInputDate.Name = "tsInputDate"
-        Me.tsInputDate.Size = New System.Drawing.Size(72, 17)
+        Me.tsInputDate.Size = New System.Drawing.Size(71, 17)
         Me.tsInputDate.Text = "txtinputdate"
         '
         'lbUpdated
@@ -213,19 +213,19 @@ Partial Class PURCHASE_ORDER
         'tsUserUpdate
         '
         Me.tsUserUpdate.Name = "tsUserUpdate"
-        Me.tsUserUpdate.Size = New System.Drawing.Size(80, 17)
+        Me.tsUserUpdate.Size = New System.Drawing.Size(79, 17)
         Me.tsUserUpdate.Text = "txtuserupdate"
         '
         'tsUpdateDate
         '
         Me.tsUpdateDate.Name = "tsUpdateDate"
-        Me.tsUpdateDate.Size = New System.Drawing.Size(81, 17)
+        Me.tsUpdateDate.Size = New System.Drawing.Size(80, 17)
         Me.tsUpdateDate.Text = "txtupdatedate"
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(119, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(120, 17)
         Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
         '
         'tbstmst
@@ -726,6 +726,118 @@ Partial Class PURCHASE_ORDER
         Me.dgDetail.Size = New System.Drawing.Size(802, 116)
         Me.dgDetail.TabIndex = 370
         '
+        'NO
+        '
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver
+        Me.NO.DefaultCellStyle = DataGridViewCellStyle6
+        Me.NO.HeaderText = "No"
+        Me.NO.Name = "NO"
+        Me.NO.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.NO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.NO.Width = 40
+        '
+        'ITEMID
+        '
+        Me.ITEMID.HeaderText = "Item ID"
+        Me.ITEMID.Name = "ITEMID"
+        Me.ITEMID.ReadOnly = True
+        Me.ITEMID.Visible = False
+        Me.ITEMID.Width = 75
+        '
+        'ITEM
+        '
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ITEM.DefaultCellStyle = DataGridViewCellStyle7
+        Me.ITEM.HeaderText = "Item Description"
+        Me.ITEM.Name = "ITEM"
+        Me.ITEM.Width = 200
+        '
+        'QTYORDER
+        '
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle8.Format = "N0"
+        DataGridViewCellStyle8.NullValue = "0"
+        Me.QTYORDER.DefaultCellStyle = DataGridViewCellStyle8
+        Me.QTYORDER.HeaderText = "Qty Order"
+        Me.QTYORDER.Name = "QTYORDER"
+        Me.QTYORDER.Width = 50
+        '
+        'UNIT
+        '
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.UNIT.DefaultCellStyle = DataGridViewCellStyle9
+        Me.UNIT.HeaderText = "Unit"
+        Me.UNIT.Name = "UNIT"
+        Me.UNIT.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.UNIT.Width = 40
+        '
+        'UNITPRICE
+        '
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle10.Format = "N0"
+        DataGridViewCellStyle10.NullValue = "0"
+        Me.UNITPRICE.DefaultCellStyle = DataGridViewCellStyle10
+        Me.UNITPRICE.HeaderText = "Unit Price"
+        Me.UNITPRICE.Name = "UNITPRICE"
+        Me.UNITPRICE.Width = 75
+        '
+        'DISC
+        '
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle11.Format = "N0"
+        DataGridViewCellStyle11.NullValue = "0"
+        Me.DISC.DefaultCellStyle = DataGridViewCellStyle11
+        Me.DISC.HeaderText = "Disc Amount"
+        Me.DISC.Name = "DISC"
+        Me.DISC.Width = 70
+        '
+        'TOTALPRICE
+        '
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle12.Format = "N0"
+        DataGridViewCellStyle12.NullValue = "0"
+        Me.TOTALPRICE.DefaultCellStyle = DataGridViewCellStyle12
+        Me.TOTALPRICE.HeaderText = "Total Price"
+        Me.TOTALPRICE.Name = "TOTALPRICE"
+        Me.TOTALPRICE.Width = 80
+        '
+        'PRNO
+        '
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PRNO.DefaultCellStyle = DataGridViewCellStyle13
+        Me.PRNO.HeaderText = "PR No"
+        Me.PRNO.Name = "PRNO"
+        Me.PRNO.ReadOnly = True
+        Me.PRNO.Width = 75
+        '
+        'QTYPR
+        '
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.Format = "N0"
+        DataGridViewCellStyle14.NullValue = "0"
+        Me.QTYPR.DefaultCellStyle = DataGridViewCellStyle14
+        Me.QTYPR.HeaderText = "Qty PR"
+        Me.QTYPR.Name = "QTYPR"
+        Me.QTYPR.Width = 50
+        '
+        'NOTES
+        '
+        Me.NOTES.HeaderText = "Notes"
+        Me.NOTES.Name = "NOTES"
+        Me.NOTES.Width = 80
+        '
+        'ROWID
+        '
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.ROWID.DefaultCellStyle = DataGridViewCellStyle15
+        Me.ROWID.HeaderText = "ID"
+        Me.ROWID.Name = "ROWID"
+        Me.ROWID.Visible = False
+        Me.ROWID.Width = 30
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.Control
@@ -1217,9 +1329,9 @@ Partial Class PURCHASE_ORDER
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(6, 71)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 13)
+        Me.Label3.Size = New System.Drawing.Size(51, 13)
         Me.Label3.TabIndex = 374
-        Me.Label3.Text = "Supplier"
+        Me.Label3.Text = "Pemasok"
         '
         'Label2
         '
@@ -1349,118 +1461,6 @@ Partial Class PURCHASE_ORDER
         Me.cbDP.Name = "cbDP"
         Me.cbDP.Size = New System.Drawing.Size(76, 21)
         Me.cbDP.TabIndex = 385
-        '
-        'NO
-        '
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver
-        Me.NO.DefaultCellStyle = DataGridViewCellStyle6
-        Me.NO.HeaderText = "No"
-        Me.NO.Name = "NO"
-        Me.NO.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.NO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.NO.Width = 40
-        '
-        'ITEMID
-        '
-        Me.ITEMID.HeaderText = "Item ID"
-        Me.ITEMID.Name = "ITEMID"
-        Me.ITEMID.ReadOnly = True
-        Me.ITEMID.Visible = False
-        Me.ITEMID.Width = 75
-        '
-        'ITEM
-        '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ITEM.DefaultCellStyle = DataGridViewCellStyle7
-        Me.ITEM.HeaderText = "Item Description"
-        Me.ITEM.Name = "ITEM"
-        Me.ITEM.Width = 200
-        '
-        'QTYORDER
-        '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle8.Format = "N0"
-        DataGridViewCellStyle8.NullValue = "0"
-        Me.QTYORDER.DefaultCellStyle = DataGridViewCellStyle8
-        Me.QTYORDER.HeaderText = "Qty Order"
-        Me.QTYORDER.Name = "QTYORDER"
-        Me.QTYORDER.Width = 50
-        '
-        'UNIT
-        '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.UNIT.DefaultCellStyle = DataGridViewCellStyle9
-        Me.UNIT.HeaderText = "Unit"
-        Me.UNIT.Name = "UNIT"
-        Me.UNIT.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.UNIT.Width = 40
-        '
-        'UNITPRICE
-        '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle10.Format = "N0"
-        DataGridViewCellStyle10.NullValue = "0"
-        Me.UNITPRICE.DefaultCellStyle = DataGridViewCellStyle10
-        Me.UNITPRICE.HeaderText = "Unit Price"
-        Me.UNITPRICE.Name = "UNITPRICE"
-        Me.UNITPRICE.Width = 75
-        '
-        'DISC
-        '
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle11.Format = "N0"
-        DataGridViewCellStyle11.NullValue = "0"
-        Me.DISC.DefaultCellStyle = DataGridViewCellStyle11
-        Me.DISC.HeaderText = "Disc Amount"
-        Me.DISC.Name = "DISC"
-        Me.DISC.Width = 70
-        '
-        'TOTALPRICE
-        '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle12.Format = "N0"
-        DataGridViewCellStyle12.NullValue = "0"
-        Me.TOTALPRICE.DefaultCellStyle = DataGridViewCellStyle12
-        Me.TOTALPRICE.HeaderText = "Total Price"
-        Me.TOTALPRICE.Name = "TOTALPRICE"
-        Me.TOTALPRICE.Width = 80
-        '
-        'PRNO
-        '
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PRNO.DefaultCellStyle = DataGridViewCellStyle13
-        Me.PRNO.HeaderText = "PR No"
-        Me.PRNO.Name = "PRNO"
-        Me.PRNO.ReadOnly = True
-        Me.PRNO.Width = 75
-        '
-        'QTYPR
-        '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
-        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle14.Format = "N0"
-        DataGridViewCellStyle14.NullValue = "0"
-        Me.QTYPR.DefaultCellStyle = DataGridViewCellStyle14
-        Me.QTYPR.HeaderText = "Qty PR"
-        Me.QTYPR.Name = "QTYPR"
-        Me.QTYPR.Width = 50
-        '
-        'NOTES
-        '
-        Me.NOTES.HeaderText = "Notes"
-        Me.NOTES.Name = "NOTES"
-        Me.NOTES.Width = 80
-        '
-        'ROWID
-        '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.ROWID.DefaultCellStyle = DataGridViewCellStyle15
-        Me.ROWID.HeaderText = "ID"
-        Me.ROWID.Name = "ROWID"
-        Me.ROWID.Visible = False
-        Me.ROWID.Width = 30
         '
         'PURCHASE_ORDER
         '

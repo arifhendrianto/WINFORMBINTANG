@@ -329,6 +329,12 @@
     <Compile Include="Pembelian\PURCHASE_DP.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Pembelian\PURCHASE_INVOICE.Designer.vb">
+      <DependentUpon>PURCHASE_INVOICE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pembelian\PURCHASE_INVOICE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pembelian\PURCHASE_ORDER.Designer.vb">
       <DependentUpon>PURCHASE_ORDER.vb</DependentUpon>
     </Compile>
@@ -440,6 +446,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Password.resx">
       <DependentUpon>Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\PURCHASE_DP.resx">
+      <DependentUpon>PURCHASE_DP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembelian\PURCHASE_INVOICE.resx">
+      <DependentUpon>PURCHASE_INVOICE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pembelian\PURCHASE_ORDER.resx">
       <DependentUpon>PURCHASE_ORDER.vb</DependentUpon>
